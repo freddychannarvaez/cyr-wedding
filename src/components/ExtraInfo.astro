@@ -1,0 +1,59 @@
+---
+interface Props {
+  dressCode1: string;
+  dressCode2: string;
+  dressCode3: string;
+  dressCode4: string;
+  dressCode5: string;
+  gift1: string;
+  gift2: string;
+  gift3: string;
+  gift4: string;
+  confirmAssist1: string;
+  confirmAssist2: string;
+  confirmAssist3: string;
+}
+
+const { dressCode1, dressCode2, dressCode3, dressCode4, dressCode5, gift1, gift2, gift3, gift4, confirmAssist1, confirmAssist2, confirmAssist3 } = Astro.props;
+---
+<section>
+  <div class="info">
+    <div class="dressCode">
+      <p class="dressCode1">{dressCode1}</p>
+      <p class="dressCode2">{dressCode2}</p>
+      <p class="dressCode3">{dressCode3}</p>
+      <p class="dressCode4">{dressCode4}</p>
+      <p class="dressCode5">{dressCode5}</p>
+    </div>
+    <div class="gift">
+      <p class="gift1">{gift1}</p>
+      <p class="gift2">{gift2}</p>
+      <p class="gift3">{gift3}</p>
+      <p class="gift4">{gift4}</p>
+    </div>
+    <div class="confirmAssist">
+      <p class="confirmAssist1">{confirmAssist1}</p>
+      <p class="confirmAssist2">{confirmAssist2}</p>
+      <p class="confirmAssist3">{confirmAssist3}</p>
+    </div>
+  </div>
+  <img src="/extrainfo.avif" class="image">
+</section>
+<style>
+  section {
+    background-color: #EFEAE7;
+    min-height: 800px;
+  }
+  .info {
+    padding: 0 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .image {
+    width: 100%;
+  }
+</style>

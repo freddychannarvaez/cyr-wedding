@@ -1,0 +1,57 @@
+---
+interface Props {
+	quote: string;
+  author: string;
+}
+
+const { quote, author } = Astro.props;
+---
+<section>
+  <p class="quote">{quote}</p>
+  <p class="author">{author}</p>
+  <div class="gallery">
+    <img src="/gallery1.avif" class="vertical">
+    <img src="/gallery2.avif" class="horizontal top">
+    <img src="/gallery3.avif" class="horizontal top">
+    <img src="/gallery4.avif" class="vertical">
+    <img src="/gallery5.avif" class="horizontal bottom">
+    <img src="/gallery6.avif" class="horizontal bottom">
+  </div>
+</section>
+<style>
+  section {
+    background-color: #EFEAE7;
+    height: 800px;
+    padding: 0 12%;
+  }
+  .quote {
+
+  }
+  .author {
+    font-family: 'Breathney Demo';
+    font-size: 12px;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    img {
+      box-sizing: border-box;
+      margin: 10px;
+      object-fit: cover;
+    }
+    .vertical {
+      max-width: 200px;
+    }
+    .horizontal {
+      height: 200px;
+      width: 300px;
+    }
+    .top {
+      align-self: flex-end;
+    }
+    .bottom {
+      align-self: flex-start;
+    }
+  }
+</style>
