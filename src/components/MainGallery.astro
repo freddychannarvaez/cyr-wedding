@@ -50,5 +50,8 @@ const { quote, author } = Astro.props;
     bottom: 0;
     right: 0;
     height: 400px;
+    @media (width < 900px) {
+      height: 20%;
+    }
   }
 </style>
