@@ -12,7 +12,6 @@ const { quote1, quote2, quote3, quote4, author } = Astro.props;
 <section>
   <img src="/extragallery1.avif" class="image">
   <img src="/extragallery2.avif" class="image">
-  <img src="/extragallery3.avif" class="image">
   <div>
     <!-- <p class="quote1">{quote1}</p> -->
     <p class="quote2">{quote2}</p>
@@ -20,6 +19,8 @@ const { quote1, quote2, quote3, quote4, author } = Astro.props;
     <p class="quote4">{quote4}</p>
     <p class="author">{author}</p>
   </div>
+  <img src="/leaves13.svg" class="leaves13">
+  <img src="/leaves14.svg" class="leaves14">
 </section>
 <style>
   section {
@@ -30,8 +31,34 @@ const { quote1, quote2, quote3, quote4, author } = Astro.props;
     align-items: center;
     justify-content: center;
     row-gap: 30px;
+    position: relative;
   }
   .image {
     max-width: 300px;
+  }
+  p {
+    font-size: 20px;
+    letter-spacing: 3px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .author {
+    width: 100%;
+    text-align: end;
+    font-family: 'Breathney Demo';
+    font-size: 20px;
+    padding-top: 20px;
+  }
+  .leaves13 {
+    position: absolute;
+    width: 200px;
+    left: 0;
+    bottom: 0;
+  }
+  .leaves14 {
+    position: absolute;
+    height: 250px;
+    right: 0;
+    top: -5px;
   }
 </style>

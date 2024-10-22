@@ -27,22 +27,32 @@ const { name1, name2, text1, text2, month, day, year, hour, address1, address2 }
     </div>
     <div class="date">
       <p class="month">{month}</p>
+      <p class="separator">|</p>
       <p class="day">{day}</p>
+      <p class="separator">|</p>
       <p class="year">{year}</p>
     </div>
     <p class="hour">Recepción al evento: {hour}</p>
     <p class="address1">{address1}</p>
     <p class="address2">{address2}</p>
   </div>
-  <img src="gallery2.avif" class="image">
+  <img src="presentation.avif" class="image">
+  <img src="/leaves3.svg" class="leaves3">
+  <img src="/leaves4.svg" class="leaves4">
+  <img src="/leaves5.svg" class="leaves5">
+  <img src="/leaves6.svg" class="leaves6">
+  <img src="/leaves7.svg" class="leaves7">
+
 </section>
 <style>
   section {
     background-color: #EFEAE7;
     min-height: 800px;
+		font-family: 'Tw Cen MT', sans-serif;
+    position: relative;
   }
   .info {
-    padding: 0 12%;
+    padding: 100px 12%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,16 +64,70 @@ const { name1, name2, text1, text2, month, day, year, hour, address1, address2 }
     display: inherit;
     flex-direction: inherit;
     align-items: center;
-		font-family: 'Tw Cen MT', sans-serif;
+    padding: 40px 0;
   }
   .name {
     font-size: 50px;
     margin: 15px 0;
+    letter-spacing: 15px;
   }
-  .hour {
-
+  .text {
+    letter-spacing: 5px;
+    line-height: 30px;
+    padding-bottom: 50px;
+  }
+  .date {
+    display: flex;
+    flex-direction: row;
+    font-size: 50px;
+    letter-spacing: 10px;
+    padding-bottom: 50px;
+    p {
+      margin: 20px 10px;
+    }
+    .separator {
+      margin: 0;
+      font-size: 80px;
+      font-weight: lighter;
+    }
+    .day {
+      font-size: 70px;
+    }
+  }
+  .hour, .address1, .address2 {
+    letter-spacing: 3px;
   }
   .image {
     width: 100%;
+  }
+  .leaves3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 600px;
+  }
+  .leaves4 {
+    position: absolute;
+    height: 200px;
+    left: 0;
+    top: 700px;
+  }
+  .leaves5 {
+    position: absolute;
+    width: 250px;
+    left: 0;
+    bottom: 4px;
+  }
+  .leaves6 {
+    position: absolute;
+    height: 400px;
+    right: 0;
+    top: 0;
+  }
+  .leaves7 {
+    position: absolute;
+    width: 250px;
+    right: 0;
+    bottom: 4px;
   }
 </style>

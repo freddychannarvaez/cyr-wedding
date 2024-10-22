@@ -9,49 +9,46 @@ const { quote, author } = Astro.props;
 <section>
   <p class="quote">{quote}</p>
   <p class="author">{author}</p>
-  <div class="gallery">
-    <img src="/gallery1.avif" class="vertical">
-    <img src="/gallery2.avif" class="horizontal top">
-    <img src="/gallery3.avif" class="horizontal top">
-    <img src="/gallery4.avif" class="vertical">
-    <img src="/gallery5.avif" class="horizontal bottom">
-    <img src="/gallery6.avif" class="horizontal bottom">
-  </div>
+  <img src="/gallery1.avif" class="mainImage">
+  <img src="/leaves2.svg" class="leaves2">
 </section>
 <style>
   section {
     background-color: #EFEAE7;
-    height: 800px;
-    padding: 0 12%;
-  }
-  .quote {
+    min-height: 800px;
+    padding: 100px 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 
   }
-  .author {
-    font-family: 'Breathney Demo';
-    font-size: 12px;
+  .quote {
+    width: 900px;
+    max-width: 90%;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 5px;
+    line-height: 50px;
   }
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    
-    img {
-      box-sizing: border-box;
-      margin: 10px;
-      object-fit: cover;
-    }
-    .vertical {
-      max-width: 200px;
-    }
-    .horizontal {
-      height: 200px;
-      width: 300px;
-    }
-    .top {
-      align-self: flex-end;
-    }
-    .bottom {
-      align-self: flex-start;
-    }
+  .author {
+    width: 900px;
+    max-width: 90%;
+    text-align: end;
+    font-family: 'Breathney Demo';
+    font-size: 20px;
+    padding-right: 70px;
+  }
+  .mainImage {
+    width: 400px;
+    height: auto;
+    padding-bottom: 100px;
+  }
+  }
+  .leaves2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 400px;
   }
 </style>
