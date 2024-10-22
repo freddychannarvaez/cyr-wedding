@@ -13,7 +13,7 @@ const { quote1, quote2, quote3, quote4, author } = Astro.props;
   <img src="/extragallery1.avif" class="image">
   <img src="/extragallery2.avif" class="image">
   <div>
-    <!-- <p class="quote1">{quote1}</p> -->
+    <p class="quote1">{quote1}</p>
     <p class="quote2">{quote2}</p>
     <p class="quote3">{quote3}</p>
     <p class="quote4">{quote4}</p>
@@ -36,6 +36,18 @@ const { quote1, quote2, quote3, quote4, author } = Astro.props;
   .image {
     max-width: 300px;
   }
+  .quote1 {
+    position: absolute;
+    font-family: 'Breathney Demo';
+    font-size: 30px;
+    right: 150px;
+    top: 150px;
+    transform: rotate(-20deg);
+    @media (width < 900px) {
+      right: 15%
+    }
+  }
+
   p {
     font-size: 20px;
     letter-spacing: 3px;
@@ -54,11 +66,17 @@ const { quote1, quote2, quote3, quote4, author } = Astro.props;
     width: 200px;
     left: 0;
     bottom: 0;
+    @media (width < 900px) {
+      width: 25%;
+    }
   }
   .leaves14 {
     position: absolute;
     height: 250px;
     right: 0;
     top: -5px;
+    @media (width < 900px) {
+      height: 10%;
+    }
   }
 </style>

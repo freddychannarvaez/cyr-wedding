@@ -24,14 +24,14 @@ const { dressCode1, dressCode2, dressCode3, dressCode4, dressCode5, gift1, gift2
       <p class="dressCode4">{dressCode4}</p>
       <p class="dressCode5">{dressCode5}</p>
     </div>
-    <span class="separator">______________________________________________________</span>
+    <div class="separator"></div>
     <div class="gift">
       <p class="gift1">{gift1}</p>
       <p class="gift2">{gift2}</p>
       <p class="gift3">{gift3}</p>
       <p class="gift4">{gift4}</p>
     </div>
-    <span class="separator">______________________________________________________</span>
+    <div class="separator"></div>
     <div class="confirmAssist">
       <p class="confirmAssist1">{confirmAssist1}</p>
       <p class="confirmAssist2">{confirmAssist2}</p>
@@ -63,16 +63,24 @@ const { dressCode1, dressCode2, dressCode3, dressCode4, dressCode5, gift1, gift2
     letter-spacing: 5px;
     line-height: 40px;
   }
+  .dressCode1 {
+    position: relative;
+    z-index: 1;
+  }
   .dressCode3 {
     text-align: end;
     padding: 0 110px 50px 0;
+    @media (width < 1100px) {
+      padding: 0;
+      text-align: center;
+    }
   }
   .dressCode5 {
     padding-bottom: 30px;
   }
   .separator {
-    letter-spacing: 0px;
-    font-weight: bold;
+    border-bottom: 2px solid black;
+    width: 80%;
     padding-bottom: 30px;
   }
   .confirmAssist1, .confirmAssist3 {
@@ -86,29 +94,44 @@ const { dressCode1, dressCode2, dressCode3, dressCode4, dressCode5, gift1, gift2
     width: 80px;
     left: 0;
     top: 0;
+    @media (width < 900px) {
+      width: 7%;
+    }
   }
   .leaves9 {
     position: absolute;
     width: 200px;
     left: 0;
     top: 180px;
+    @media (width < 900px) {
+      width: 15%;
+    }
   }
   .leaves10 {
     position: absolute;
     height: 250px;
     left: 0;
     bottom: 4px;
+    @media (width < 900px) {
+      height: 100px;
+    }
   }
   .leaves11 {
     position: absolute;
     width: 250px;
     right: 0;
     bottom: 200px;
+    @media (width < 900px) {
+      width: 25%;
+    }
   }
   .leaves12 {
     position: absolute;
     height: 250px;
     right: 0;
     top: -5px;
+    @media (width < 900px) {
+      height: 10%;
+    }
   }
 </style>

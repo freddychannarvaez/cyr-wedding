@@ -27,9 +27,9 @@ const { name1, name2, text1, text2, month, day, year, hour, address1, address2 }
     </div>
     <div class="date">
       <p class="month">{month}</p>
-      <p class="separator">|</p>
+      <div class="separator"></div>
       <p class="day">{day}</p>
-      <p class="separator">|</p>
+      <div class="separator"></div>
       <p class="year">{year}</p>
     </div>
     <p class="hour">Recepción al evento: {hour}</p>
@@ -82,16 +82,31 @@ const { name1, name2, text1, text2, month, day, year, hour, address1, address2 }
     font-size: 50px;
     letter-spacing: 10px;
     padding-bottom: 50px;
+    @media (width < 650px) {
+      flex-direction: column;
+      row-gap: 20px;
+      align-items: center;
+    }
     p {
       margin: 20px 10px;
     }
     .separator {
-      margin: 0;
-      font-size: 80px;
-      font-weight: lighter;
+      border-left: 2px solid black;
+      height: 90px;
+      @media (width < 650px) {
+        border-left: unset;
+        border-bottom: 2px solid black;
+        height: 1px;
+        width: 60%;
+      }
     }
     .day {
-      font-size: 70px;
+      font-size: 90px;
+      line-height: 70px;
+      margin: 0 10px;
+    }
+    .month, .year {
+      margin: 5px 30px;
     }
   }
   .hour, .address1, .address2 {
@@ -105,22 +120,36 @@ const { name1, name2, text1, text2, month, day, year, hour, address1, address2 }
     top: 0;
     left: 0;
     height: 600px;
+    @media (width < 900px) {
+      height: 25%;
+    }
+    @media (width < 600px) {
+      height: 15%;
+    }
   }
   .leaves4 {
     position: absolute;
     height: 200px;
     left: 0;
     top: 700px;
+    @media (width < 900px) {
+      height: 10%;
+      top: 30%
+    }
   }
   .leaves5 {
     position: absolute;
     width: 250px;
     left: 0;
     bottom: 4px;
+    @media (width < 900px) {
+      width: 25%;
+    }
   }
   .leaves6 {
     position: absolute;
-    height: 400px;
+    height: 20%;
+    /* height: 400px; */
     right: 0;
     top: 0;
   }
@@ -129,5 +158,8 @@ const { name1, name2, text1, text2, month, day, year, hour, address1, address2 }
     width: 250px;
     right: 0;
     bottom: 4px;
+    @media (width < 900px) {
+      width: 25%;
+    }
   }
 </style>
