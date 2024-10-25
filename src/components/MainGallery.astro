@@ -7,8 +7,8 @@ interface Props {
 const { quote, author } = Astro.props;
 ---
 <section>
-  <p class="quote" data-aos="fade-left">{quote}</p>
-  <p class="author" data-aos="fade-right">{author}</p>
+  <p class="quote" data-aos="fade-down">{quote}</p>
+  <p class="author" data-aos="fade-up">{author}</p>
   <img src="/gallery1.avif" class="mainImage" data-aos="fade-up">
   <img src="/leaves2.svg" class="leaves2">
 </section>
@@ -40,8 +40,8 @@ const { quote, author } = Astro.props;
     padding-right: 70px;
   }
   .mainImage {
-    width: 400px;
-    max-width: 98%;
+    max-width: 400px;
+    width: 90%;
     aspect-ratio: 743 / 1181;;
     padding-bottom: 100px;
   }

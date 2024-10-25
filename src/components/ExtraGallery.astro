@@ -12,12 +12,12 @@ const { quote1, quote2, quote3, quote4, author } = Astro.props;
 <section>
   <img src="/extragallery1.avif" class="image" data-aos="fade-up">
   <img src="/extragallery2.avif" class="image" data-aos="fade-down">
-  <div>
-    <p class="quote1" data-aos="fade-left">{quote1}</p>
-    <p class="quote2" data-aos="fade-left">{quote2}</p>
-    <p class="quote3" data-aos="fade-left">{quote3}</p>
-    <p class="quote4" data-aos="fade-left">{quote4}</p>
-    <p class="author" data-aos="fade-right">{author}</p>
+  <div class="quote">
+    <p class="quote1" data-aos="fade-up">{quote1}</p>
+    <p class="quote2" data-aos="fade-up">{quote2}</p>
+    <p class="quote3" data-aos="fade-up">{quote3}</p>
+    <p class="quote4" data-aos="fade-up">{quote4}</p>
+    <p class="author" data-aos="fade-down">{author}</p>
   </div>
   <img src="/leaves13.svg" class="leaves13">
   <img src="/leaves14.svg" class="leaves14">
@@ -35,6 +35,9 @@ const { quote1, quote2, quote3, quote4, author } = Astro.props;
   }
   .image {
     max-width: 300px;
+  }
+  .quote {
+    max-width: 90%;
   }
   .quote1 {
     position: absolute;

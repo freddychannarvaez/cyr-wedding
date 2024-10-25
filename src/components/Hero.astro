@@ -2,7 +2,7 @@
 
 ---
 <section>
-  <img src="/hero.avif" class="hero" alt="¡Nos casamos!">
+  <img src="/hero.avif" class="hero" alt="¡Nos casamos!" data-aos="fade-in">
   <div class="heroText">
     <span>¡Nos casamos!</span>
   </div>
@@ -12,7 +12,6 @@
   section {
     display: flex;
     position: relative;
-    animation: fadeInAnimation ease 3s;
   }
   .hero {
     width: 100%;
@@ -42,15 +41,6 @@
 
     @media (width < 700px) {
       height: 40%;
-    }
-  }
-  @keyframes fadeInAnimation {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
     }
   }
 </style>
