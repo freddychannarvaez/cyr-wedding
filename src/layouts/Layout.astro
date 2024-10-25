@@ -12,12 +12,20 @@ import { ViewTransitions } from "astro:transitions";
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Invitación digital para la boda de Cinthya y Ricardo" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<ViewTransitions />
+		<link rel="canonical" href="https://cinthyayricardo.vercel.app/" />
+		<meta property="og:image" content='https://github.com/freddychannarvaez/cyr-wedding/blob/main/public/hero.avif' />
+		<meta property="og:title" content='La boda de Cinthya y Ricardo'/>
+		<meta property="og:description" content='Invitación digital para la boda de Cinthya y Ricardo'/>
+		<meta property="og:url" content="https://cinthyayricardo.vercel.app/" />
+		<meta property="og:site_name" content="Cinthya y Ricardo" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="es_ES" />
 	</head>
 	<body>
 		<slot />
