@@ -17,7 +17,7 @@ interface Props {
 const { dressCode1, dressCode2, dressCode3, dressCode4, dressCode5, gift1, gift2, gift3, gift4, confirmAssist1, confirmAssist2, confirmAssist3 } = Astro.props;
 ---
 <section>
-  <div class="info">
+  <div class="info" data-aos="fade-right">
     <div class="dressCode">
       <p class="dressCode1">{dressCode1} {dressCode2}</p>
       <p class="dressCode3">{dressCode3}</p>
@@ -38,7 +38,7 @@ const { dressCode1, dressCode2, dressCode3, dressCode4, dressCode5, gift1, gift2
       <p class="confirmAssist3">{confirmAssist3}</p>
     </div>
   </div>
-  <img src="/extrainfo.avif" class="image">
+  <img src="/extrainfo.avif" class="image" data-aos="fade-in">
   <img src="/leaves8.svg" class="leaves8">
   <img src="/leaves9.svg" class="leaves9">
   <img src="/leaves10.svg" class="leaves10">

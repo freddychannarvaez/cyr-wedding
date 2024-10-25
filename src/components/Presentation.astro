@@ -15,7 +15,7 @@ interface Props {
 const { name1, name2, text1, text2, month, day, year, hour, address1, address2 } = Astro.props;
 ---
 <section>
-  <div class="info">
+  <div class="info" data-aos="fade-left">
     <div class="names">
       <p class="name">{name1}</p>
       <p class="name">&</p>
@@ -54,7 +54,7 @@ const { name1, name2, text1, text2, month, day, year, hour, address1, address2 }
       </div>
     </div>
   </div>
-  <img src="presentation.avif" class="image">
+  <img src="presentation.avif" class="image" data-aos="fade-in">
   <img src="/leaves3.svg" class="leaves3">
   <img src="/leaves4.svg" class="leaves4">
   <img src="/leaves5.svg" class="leaves5">

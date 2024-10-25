@@ -7,9 +7,9 @@ interface Props {
 const { quote, author } = Astro.props;
 ---
 <section>
-  <p class="quote">{quote}</p>
-  <p class="author">{author}</p>
-  <img src="/gallery1.avif" class="mainImage">
+  <p class="quote" data-aos="fade-left">{quote}</p>
+  <p class="author" data-aos="fade-right">{author}</p>
+  <img src="/gallery1.avif" class="mainImage" data-aos="fade-up">
   <img src="/leaves2.svg" class="leaves2">
 </section>
 <style>
