@@ -12,9 +12,10 @@ interface Props {
   confirmAssist1: string;
   confirmAssist2: string;
   confirmAssist3: string;
+  guests?: number;
 }
 
-const { dressCode1, dressCode2, dressCode3, dressCode4, dressCode5, gift1, gift2, gift3, gift4, confirmAssist1, confirmAssist2, confirmAssist3 } = Astro.props;
+const { dressCode1, dressCode2, dressCode3, dressCode4, dressCode5, gift1, gift2, gift3, gift4, confirmAssist1, confirmAssist2, confirmAssist3, guests = 2 } = Astro.props;
 ---
 <section>
   <div class="info" data-aos="fade-down">
@@ -32,11 +33,13 @@ const { dressCode1, dressCode2, dressCode3, dressCode4, dressCode5, gift1, gift2
       <p class="gift4">{gift4}</p>
     </div>
     <div class="separator"></div>
+    <p class="guests"><span class="guestsNumber">{guests}</span> {`persona` + (guests > 1 ? 's' : '')}</p>
     <div class="confirmAssist">
       <p class="confirmAssist1">{confirmAssist1}</p>
       <p class="confirmAssist2">{confirmAssist2}</p>
       <p class="confirmAssist3">{confirmAssist3}</p>
     </div>
+    <a class="location" href="https://goo.gl/maps/z6Xn3cyangrzxrfs9" target="_blank"><img src="/location.svg" alt="Ubicación"></a>
   </div>
   <img src="/extrainfo.avif" class="image" data-aos="fade-in">
   <img src="/leaves8.svg" class="leaves8">
@@ -83,6 +86,27 @@ const { dressCode1, dressCode2, dressCode3, dressCode4, dressCode5, gift1, gift2
     width: 80%;
     padding-bottom: 30px;
   }
+  .guests {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .guestsNumber {
+      font-size: 50px;
+    }
+  }
+  .location {
+    width: 50px;
+    height: 50px;
+    padding-bottom: 50px;
+    img {
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  } 
   .image {
     width: 100%;
   }
